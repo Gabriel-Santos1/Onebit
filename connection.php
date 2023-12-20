@@ -5,7 +5,7 @@
     $pass = "";
     $bd = "company";
 
-    if(mysqli_connect($server, $user, $pass, $bd)){
+    if($conn = mysqli_connect($server, $user, $pass, $bd)){
         //echo "connect";
     } 
     else

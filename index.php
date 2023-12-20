@@ -20,7 +20,7 @@
 
             <div class="column">
 
-                <form action = "time_Script.php" method="POST">
+                <form action = "form_Script.php" method="POST">
 
                     <div class="mb-3">
                         <label for="Name" class="form-label">Nome</label>
