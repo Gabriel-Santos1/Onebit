@@ -23,23 +23,28 @@
                 <form action = "time_Script.php" method="POST">
 
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
+                        <label for="Name" class="form-label">Nome</label>
                         <input type="text" class="form-control" placeholder="Ex: Maria Silva" name="name">
                     </div>
 
                     <div class="mb-3">
-                        <label for="cpf" class="form-label">Cpf</label>
+                        <label for="Cpf" class="form-label">Cpf</label>
                         <input type="text" class="form-control" placeholder="Ex: 111.222.333-25" name="cpf">
                     </div>
 
                     <div class="mb-3">
                         <label for="Email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" placeholder="Ex: name@example.com" name="Email">
+                        <input type="email" class="form-control" placeholder="Ex: name@example.com" name="email">
                     </div>
 
                     <div class="mb-3">
                         <label for="Password" class="form-label">Password</label>
-                        <input type="password" class="form-control" placeholder="Ex: joao2568!" name="Password">
+                        <input type="password" class="form-control" placeholder="Ex: joao2568!" name="password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" placeholder="Ex: joao2568!" name="phone">
                     </div>
 
                     <div class="mb-3">
