@@ -24,27 +24,27 @@
 
                     <div class="mb-3">
                         <label for="Name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" placeholder="Ex: Maria Silva" name="name">
+                        <input type="text" class="form-control" placeholder="Ex: Maria Silva" name="name" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="Cpf" class="form-label">Cpf</label>
-                        <input type="text" class="form-control" placeholder="Ex: 111.222.333-25" name="cpf">
+                        <input type="text" class="form-control" placeholder="Ex: 111.222.333-25" name="cpf" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="Email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" placeholder="Ex: name@example.com" name="email">
+                        <input type="email" class="form-control" placeholder="Ex: name@example.com" name="email" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="Password" class="form-label">Password</label>
-                        <input type="password" class="form-control" placeholder="Ex: joao2568!" name="password">
+                        <input type="password" class="form-control" placeholder="Ex: joao2568!" name="password" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="Phone" class="form-label">Phone</label>
-                        <input type="text" class="form-control" placeholder="Ex: joao2568!" name="phone">
+                        <input type="text" class="form-control" placeholder="Ex: joao2568!" name="phone" required>
                     </div>
 
                     <div class="mb-3">
