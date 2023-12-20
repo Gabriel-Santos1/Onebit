@@ -18,30 +18,30 @@
 
         <div class="row">
 
-            <?php 
-                include "connection.php";
+            <?php
+            include "connection.php";
 
-                $nome = $_POST['name'];
-                $cpf = $_POST['cpf'];
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                $phone = $_POST['phone'];
+            $name = $_POST['name'];
+            $cpf = $_POST['cpf'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $phone = $_POST['phone'];
 
-                $sql = "INSERT INTO `people`(`name`, `cpf`, `email`, `password`, `phone`) 
+            $sql = "INSERT INTO `people`(`name`, `cpf`, `email`, `password`, `phone`) 
 
-                VALUES ('$nome','$cpf','$email','$password','$phone')";
+                VALUES ('$name','$cpf','$email','$password','$phone')";
 
-                
-                if(mysqli_query($conn, $sql)){
-                    echo "$nome cadastrado com sucesso!";
-                }  
-                
-                else{
-                    echo "$nome não foi possivel cadastrar";
-                }
 
-            ?>   
+            if (mysqli_query($conn, $sql)) {
+                mensagem ("$name cadastrado com sucesso", 'success');
+            } else {
+                mensagem ("$name não cadastrado", 'danger');
 
+            }
+
+            ?>
+
+            <a href = "index.php"><button type="button" class="btn btn-outline-danger">Voltar</button></a>
         </div>
 
     </div>
