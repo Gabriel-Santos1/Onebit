@@ -20,7 +20,9 @@
 
             <div class="column">
 
-                <form action = "form_Script.php" method="POST">
+                <form action="form_Script.php" method="POST">
+
+                    <h2>Cadastrar</h2>
 
                     <div class="mb-3">
                         <label for="Name" class="form-label">Nome</label>
@@ -34,12 +36,14 @@
 
                     <div class="mb-3">
                         <label for="Email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" placeholder="Ex: name@example.com" name="email" required>
+                        <input type="email" class="form-control" placeholder="Ex: name@example.com" name="email"
+                            required>
                     </div>
 
                     <div class="mb-3">
                         <label for="Password" class="form-label">Password</label>
-                        <input type="password" class="form-control" placeholder="Ex: joao2568!" name="password" required>
+                        <input type="password" class="form-control" placeholder="Ex: joao2568!" name="password"
+                            required>
                     </div>
 
                     <div class="mb-3">
@@ -48,6 +52,7 @@
                     </div>
 
                     <div class="mb-3">
+                        <a href="index.php"><button type="button" class="btn btn-outline-danger">Voltar</button></a>
                         <input type="submit" class="btn btn-primary">
                     </div>
                 </form>

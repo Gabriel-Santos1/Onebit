@@ -41,7 +41,7 @@
 
             ?>
 
-            <a href = "index.php"><button type="button" class="btn btn-outline-danger">Voltar</button></a>
+            <a href = "register.php"><button type="button" class="btn btn-outline-danger">Voltar</button></a>
         </div>
 
     </div>
