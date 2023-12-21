@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1" class="form-label">Senha</label>
-                                <input type="password" class="form-control" name ="senha">
+                                <input type="password" class="form-control" name ="password">
                             </div>
 
                             <button type="submit" class="btn btn-primary">Acessar</button>
@@ -46,9 +46,11 @@
                 <?php 
                         if (isset($_POST['login'])) {
                            $login =$_POST['login'];
-                           $senha = $_POST['senha'];
+                           $password = $_POST['password'];
 
-                           if(($login == "admin@gmail.com") && ($senha == "admin")){
+                           if(($login == "admin@gmail.com") && ($password == "admin")){
+                            session_start();
+                            $_SESSION['user'] = "Robson";
                             header("location: restricted");
                            }else {
                             echo "Login inválido";

@@ -1,3 +1,6 @@
+<?php
+include "../validation.php";
+?>
 <!doctype html>
 <html lang="en">
 

@@ -1,3 +1,7 @@
+<?php
+include "../validation.php";
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +22,7 @@
 
         <div class="row">
 
-            <div class="column">
+            <div class="col-10">
 
                 <div class="jumbotron">
                     <h1 class="display-4">Cadastro web</h1>
@@ -28,6 +32,7 @@
                     </p>
                     <a class="btn btn-primary btn-lg" href="register.php" role="button">Cadastrar</a>
                     <a class="btn btn-primary btn-lg" href="search.php" role="button">Pesquisar</a>
+                    <a class="btn btn-danger btn-lg" href="../Logout.php" role="button">Logout</a>
 
                 </div>
 
