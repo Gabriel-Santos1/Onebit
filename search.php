@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 
@@ -75,7 +75,7 @@
                             <td>$email</td>
                             <td>$phone</td>
                             <td>
-                                <a href = '#' class='btn btn-info'>Editar</a>
+                                <a href = 'register_edit.php?id=$cod_people' class='btn btn-info'>Editar</a>
                                 <a href = '#' class='btn btn-danger'>Excluir</button>
                             </td>
                             </tr>";
