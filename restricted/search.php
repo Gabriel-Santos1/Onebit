@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 
@@ -39,7 +39,8 @@
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
                         <form class="d-flex" action="search.php" method="POST" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" autofocus>
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                name="search" autofocus>
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </div>
@@ -76,13 +77,18 @@
                             <td>$phone</td>
                             <td>
                                 <a href = 'register_edit.php?id=$cod_people' class='btn btn-info'>Editar</a>
-                                <a href = '#' class='btn btn-danger'>Excluir</button>
+                                <a href = '#' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#confirm'
+                                onclick=" ,'"' ,"get_data($cod_people,'$name')",'"',">Excluir</button>
                             </td>
                             </tr>";
-                          
-                            }
-            
+
+                        }
+
                         ?>
+
+
+                            
+
                     </tbody>
                 </table>
                 <a href="index.php"><button type="button" class="btn btn-outline-danger">Voltar para o
@@ -96,6 +102,40 @@
         </div>
 
     </div>
+
+    <div class="modal fade" id="confirm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmação de exclusão</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="exclude_script.php" method="POST">
+                   <p>Deseja excluir esse cliente: <b id="name_peop"></b>?</p>
+                   
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Não</button>
+                        <input type="hidden" name ="name" id="name_people_1" value="">
+                        <input type="hidden" name ="id" id="cod_people" value="">
+                        <input type="submit" class="btn btn-danger" value="Sim">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        function get_data(id,name) {
+            document.getElementById('name_peop').innerHTML = name;
+            document.getElementById('cod_people').value = id;
+            document.getElementById('name_people_1').value = name;
+
+        }
+    </script>                  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
