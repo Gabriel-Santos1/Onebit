@@ -34,44 +34,45 @@
 
             <div class="column">
 
-                <form action="form_Script.php" method="POST">
+                <form action="edit_Script.php" method="POST">
 
                     <h2>Alterações de Cadastro</h2>
 
                     <div class="mb-3">
                         <label for="Name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" placeholder="Ex: Maria Silva" name="name" required value=" 
-                        <?php echo $line ['name']?>">
+                        <input type="text" class="form-control" placeholder="Ex: Maria Silva" name="name" required 
+                        value="<?php echo $line ['name']?>">
                         
                     </div>
 
                     <div class="mb-3">
                         <label for="Cpf" class="form-label">Cpf</label>
-                        <input type="text" class="form-control" placeholder="Ex: 111.222.333-25" name="cpf" required value = "
-                        <?php echo $line ['cpf']?>">
+                        <input type="text" class="form-control" placeholder="Ex: 111.222.333-25" name="cpf" required 
+                        value = "<?php echo $line ['cpf']?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="Email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" placeholder="Ex: name@example.com" name="email" required value="
-                        <?php echo $line ['email']?>">
+                        <input type="email" class="form-control" placeholder="Ex: name@example.com" name="email" required 
+                        value="<?php echo $line ['email']?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="Password" class="form-label">Password</label>
-                        <input type="password" class="form-control" placeholder="Ex: joao2568!" name="password" required value="
-                        <?php echo $line ['password']?>">
+                        <input type="password" class="form-control" placeholder="Ex: joao2568!" name="password" required 
+                        value="<?php echo $line ['password']?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="Phone" class="form-label">Phone</label>
-                        <input type="text" class="form-control" placeholder="Ex: joao2568!" name="phone" required value="
-                        <?php echo $line ['phone']?>">
+                        <input type="text" class="form-control" placeholder="Ex: joao2568!" name="phone" required 
+                        value="<?php echo $line ['phone']?>">
                     </div>
 
                     <div class="mb-3">
                         <a href="index.php"><button type="button" class="btn btn-outline-danger">Voltar</button></a>
                         <input type="submit" class="btn btn-primary" value = "save changes">
+                        <input type="hidden" name = "id" value="<?php echo $line ['cod_people']?>">
                     </div>
                 </form>
 

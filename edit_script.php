@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro</title>
+    <title>Alteração de cadastrado</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -20,22 +20,25 @@
 
             <?php
             include "connection.php";
-
+            $id = $_POST["id"];
             $name = $_POST['name'];
             $cpf = $_POST['cpf'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             $phone = $_POST['phone'];
 
-            $sql = "INSERT INTO `people`(`name`, `cpf`, `email`, `password`, `phone`) 
+            //$sql = "INSERT INTO `people`(`name`, `cpf`, `email`, `password`, `phone`) 
 
-                VALUES ('$name','$cpf','$email','$password','$phone')";
+                //VALUES ('$name','$cpf','$email','$password','$phone')";
+
+            $sql = "UPDATE `people` set `name` = '$name', `cpf` = '$cpf', `email` = '$email', 
+            `password`= '$password' , `phone`='$phone' WHERE cod_people = $id";
 
 
             if (mysqli_query($conn, $sql)) {
-                mensagem ("$name cadastrado com sucesso", 'success');
+                mensagem ("$name Alterado com sucesso", 'success');
             } else {
-                mensagem ("$name não cadastrado", 'danger');
+                mensagem ("$name Não foi possível alterar", 'danger');
 
             }
 
