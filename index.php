@@ -24,40 +24,56 @@
                     <h1 class="display-4">Cadastro web</h1>
                     <form action="http://localhost/empresa/index.php" method="POST">
 
-                        
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Login</label>
-                                <input name="login" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <small class="form-text text-muted">Entre com seus dados.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1" class="form-label">Senha</label>
-                                <input type="password" class="form-control" name ="password">
-                            </div>
 
-                            <button type="submit" class="btn btn-primary">Acessar</button>
-                        
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Login</label>
+                            <input name="login" type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small class="form-text text-muted">Entre com seus dados.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="form-label">Senha</label>
+                            <input type="password" class="form-control" name="password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Acessar</button>
+
 
                     </form>
 
                 </div>
 
 
-                <?php 
-                        if (isset($_POST['login'])) {
-                           $login =$_POST['login'];
-                           $password = $_POST['password'];
+                <?php
+                if (isset($_POST['login'])) {
+                    $login = $_POST['login'];
+                    $password = $_POST['password'];
 
-                           if(($login == "admin@gmail.com") && ($password == "admin")){
-                            session_start();
-                            $_SESSION['user'] = "Robson";
-                            header("location: restricted");
-                           }else {
-                            echo "Login inválido";
-                           }
+                    include "restricted/connection.php";
+                    $sql = "SELECT * from `user` WHERE login = '$login' AND password = '$password'";
+
+                    if ($result = mysqli_query($conn, $sql)) {
+                        $record = mysqli_num_rows($result);
+
+                        if ($record == 1) {
+                            $line = mysqli_fetch_assoc($result);
+                            if (($login == $line['login']) && ($password == $line['password'])) {
+                                session_start();
+                                $_SESSION['user'] = "Robson";
+                                header("location: restricted");
+                            } else {
+                                echo "Login inválido";
+                            }
+                        } else {
+                            echo "Login ou senha inválido.";
                         }
-                            
-                    ?>
+                    } else {
+                        echo "Nenhum resultado encontrado";
+                    }
+
+                }
+
+                ?>
 
             </div>
 
